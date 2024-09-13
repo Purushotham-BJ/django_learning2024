@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'DoctorApp',
 ]
 
 MIDDLEWARE = [
@@ -73,10 +74,15 @@ WSGI_APPLICATION = 'clinicalproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'clinical_project_db',  # Your database name
+        'USER': 'root',       # Your MySQL user
+        'PASSWORD': 'root123', # Your MySQL password
+        'HOST': 'localhost',             # Or your DB host
+        'PORT': '3306',                  # Default MySQL port
     }
 }
 
