@@ -1,12 +1,12 @@
 from django.shortcuts import render
-
+from django.shortcuts import redirect
 # Create your views here.
 from .models import Patient
 
 # List all patients
 def patient_list(request):
     patients = Patient.objects.all()
-    return render(request, 'patient_form.html', {'patient': Patient})
+    return render(request, 'patient_list.html', {'patients': patients})
 
 # Create a new patient
 def patient_create(request):

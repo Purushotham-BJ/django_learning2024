@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from .models import Doctor
 # Create your views here.
 # List all doctors
